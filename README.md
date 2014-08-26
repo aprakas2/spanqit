@@ -22,7 +22,7 @@ query.prefix(foaf).select(name)
     .offset(10);
 ```
 
-Spanqit is based on [this](http://www.w3.org/TR/2013/REC-sparql11-query-20130321/) version SPARQL 1.1 Spec. Almost all features of SPARQL 1.1 are supported, excluding some current known limitations.
+Spanqit is based on [this version](http://www.w3.org/TR/2013/REC-sparql11-query-20130321/) of the SPARQL 1.1 Spec. Almost all features of SPARQL 1.1 are supported, excluding some current known limitations.
 >**Note:** This document assumes the user is familiar with the SPARQL query language. Please refer to the above specification if not.
 
 ***
