@@ -24,6 +24,7 @@ query.prefix(foaf).select(name)
 
 Spanqit is based on [this](http://www.w3.org/TR/2013/REC-sparql11-query-20130321/) version SPARQL 1.1 Spec. Almost all features of SPARQL 1.1 are supported, excluding some current known limitations.
 >**Note:** This document assumes the user is familiar with the SPARQL query language. Please refer to the above specification if not.
+
 ***
 ## Getting Spanqit
 Obtain Spanqit by cloning this repo:
@@ -45,7 +46,7 @@ Afterwards, add the following dependency to your project(s) pom files:
 ```
 >**Note:** This won't be necessary once Spanqit is actually in a maven repository.
 ***
-## Quick Start
+## Using Spanqit
 ### Queries
 Spanqit currently supports `SELECT` and `CONSTRUCT` queries. The `Queries` class provides static methods to instantiate `SelectQuery` and `ConstructQuery` objects:
 ```
@@ -76,4 +77,15 @@ System.out.println(foaf.getQueryString());
 
 
 ### Graph Patterns
-Graph patterns come from the more aptly named `GraphPatterns` class. 
+Spanqit uses 3 classes to represent the SPARQL graph patterns:
+- The `TriplePattern` class represents triple patterns.
+- The `GraphPatternNotTriple` class represents collections of graph patterns.
+- The `SubSelect` class represents a SPARQL sub query.
+ 
+
+```
+TriplePattern triple
+```
+- 
+
+Graph patterns are created by the more aptly named `GraphPatterns` class. 
