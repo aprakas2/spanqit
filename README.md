@@ -31,7 +31,7 @@ Obtain Spanqit by cloning this repo:
 ```
 git clone https://github.com/aprakas2/spanqit.git
 ```
-For maven users, change into the newly created `spanqit` and run the maven install command:
+For maven users, change into the newly created `spanqit` directory and run the maven install command:
 ```
 cd spanqit/
 mvn install
