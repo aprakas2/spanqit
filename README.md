@@ -24,7 +24,7 @@ query.prefix(foaf).select(name)
 
 Spanqit is based on [this](http://www.w3.org/TR/2013/REC-sparql11-query-20130321/) version SPARQL 1.1 Spec. Almost all features of SPARQL 1.1 are supported, excluding some current known limitations.
 >**Note:** This document assumes the user is familiar with the SPARQL query language. Please refer to the above specification if not.
-
+***
 ## Getting Spanqit
 Obtain Spanqit by cloning this repo:
 ```
@@ -44,9 +44,8 @@ Afterwards, add the following dependency to your project(s) pom files:
 </dependency>
 ```
 >**Note:** This won't be necessary once Spanqit is actually in a maven repository.
-
-
-## Getting Started
+***
+## Quick Start
 ### Queries
 Spanqit currently supports `SELECT` and `CONSTRUCT` queries. The `Queries` class provides static methods to instantiate `SelectQuery` and `ConstructQuery` objects:
 ```
@@ -63,7 +62,7 @@ select.prefix(ex).select(product).where(product.isA(ex.iri("book"));
 construct.prefix(ex).construct(personWroteBook).where(personAuthoredBook);
 ```
 ### Elements
-Most elements of a query are created by the static `Spanqit` class.
+Most elements of a query are created by the static `Spanqit` class. Exceptions are graph patterns and query constraints.
 ```
 Variable price = Spanqit.var("price");
 System.out.println(price.getQueryString());
@@ -73,6 +72,8 @@ Prefix foaf = Spanqit.prefix("foaf", iri("http://xmlns.com/foaf/0.1/"));
 System.out.println(foaf.getQueryString());
 ==> PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 ```
->**Note:** All query elements created by Spanqit implement the `QueryElement` interface, which provides the `getQueryString()` method. This can be used to get the String representing the SPARQL syntax of element called on.
+>**Hint:** All query elements created by Spanqit implement the `QueryElement` interface, which provides the `getQueryString()` method. This can be used to get the String representing the SPARQL syntax of any element.
+
 
 ### Graph Patterns
+Graph patterns come from the more aptly named `GraphPatterns` class. 
